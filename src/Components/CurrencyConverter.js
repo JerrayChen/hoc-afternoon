@@ -59,7 +59,7 @@ function withCurrency(BaseComponent) {
                     <button onClick={this.handleAmountIncrease}>+</button>
                     <button onClick={this.handleAmountDecrease}>-</button>
                     {this.state.currencyChosen?<BaseComponent 
-                        currency={this.state.selectedCurrency}
+                        currency={currencyData.find(e=> e.name===this.state.selectedCurrency)}
                         amount = {this.state.amount}
                     />:'Please Select Currency'}
                     
